@@ -6,10 +6,12 @@ class FizzBuzz {
             if (number == 5) {
                 return "Buzz"
             }
-            if (number == 3 || number == 6 || number == 9) {
-                return "Fizz";
-            }
+            if (isDivisibleByThree(number)) return "Fizz"
             return number.toString();
+        }
+
+        private fun isDivisibleByThree(number: Int): Boolean {
+            return number % 3 == 0;
         }
     }
 }
