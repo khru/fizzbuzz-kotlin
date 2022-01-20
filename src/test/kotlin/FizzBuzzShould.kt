@@ -9,6 +9,11 @@ class FizzBuzzShould {
     }
 
     @Test
+    fun `return Fizz when 6 given`() {
+        assertEquals("Fizz", FizzBuzz.convert(6))
+    }
+
+    @Test
     fun `return Buzz when 5 given`() {
         assertEquals("Buzz", FizzBuzz.convert(5))
     }
