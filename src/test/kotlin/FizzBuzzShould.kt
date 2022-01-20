@@ -4,8 +4,13 @@ import kotlin.test.assertEquals
 
 class FizzBuzzShould {
     @Test
-    fun `return fizz when 3 given`() {
+    fun `return Fizz when 3 given`() {
         assertEquals("Fizz", FizzBuzz.convert(3))
+    }
+
+    @Test
+    fun `return Buzz when 5 given`() {
+        assertEquals("Buzz", FizzBuzz.convert(5))
     }
 
 }
