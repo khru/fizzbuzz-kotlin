@@ -29,4 +29,9 @@ class FizzBuzzShould {
         assertEquals("FizzBuzz", FizzBuzz.convert(15))
     }
 
+    @Test
+    fun `return FizzBuzz when a numbers it's divisible by 30` () {
+        assertEquals("FizzBuzz", FizzBuzz.convert(30))
+    }
+
 }
