@@ -1,11 +1,16 @@
 package main
 
 class FizzBuzz {
+
     companion object {
+        const val CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE: String = "Fizz"
+        const val CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_FIVE: String = "Buzz"
+        const val CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE_AND_FIVE: String = "FizzBuzz"
+
         fun convert(number: Int): String {
-            if (isDivisibleByFiveAndThree(number)) return "FizzBuzz"
-            if (isDivisibleByFive(number)) return "Buzz"
-            if (isDivisibleByThree(number)) return "Fizz"
+            if (isDivisibleByFiveAndThree(number)) return CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE_AND_FIVE
+            if (isDivisibleByFive(number)) return CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_FIVE
+            if (isDivisibleByThree(number)) return CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE
             return number.toString();
         }
 

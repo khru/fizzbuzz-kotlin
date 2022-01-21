@@ -9,13 +9,13 @@ class FizzBuzzShould {
     @ParameterizedTest
     @ValueSource(ints = [3,6,9,12])
     fun `return Fizz when a divisible by three number it's given`(number: Int) {
-        assertEquals("Fizz", FizzBuzz.convert(number))
+        assertEquals(FizzBuzz.CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE, FizzBuzz.convert(number))
     }
 
     @ParameterizedTest
     @ValueSource(ints = [5,10,20,25])
     fun `return Buzz when a divisible by five number it's given`(number: Int) {
-        assertEquals("Buzz", FizzBuzz.convert(number))
+        assertEquals(FizzBuzz.CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_FIVE, FizzBuzz.convert(number))
     }
 
     @ParameterizedTest
@@ -27,7 +27,7 @@ class FizzBuzzShould {
     @ParameterizedTest
     @ValueSource(ints = [15,30,60,90])
     fun `return FizzBuzz when a number is multiple of three and five given`(number: Int) {
-        assertEquals("FizzBuzz", FizzBuzz.convert(number))
+        assertEquals(FizzBuzz.CONVERSION_FOR_NUMBERS_DIVISIBLE_BY_THREE_AND_FIVE, FizzBuzz.convert(number))
     }
 
 }
