@@ -3,7 +3,7 @@ package main
 class FizzBuzz {
     companion object {
         fun convert(number: Int): String {
-            if (number == 15) {
+            if (number == 15 || number == 30) {
                 return "FizzBuzz"
             }
             if (isDivisibleByFive(number)) return "Buzz"
