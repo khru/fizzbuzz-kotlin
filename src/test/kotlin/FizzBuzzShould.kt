@@ -23,6 +23,11 @@ class FizzBuzzShould {
     }
 
     @Test
+    fun `return Buzz when 20 given`() {
+        assertEquals("Buzz", FizzBuzz.convert(20))
+    }
+
+    @Test
     fun `return a 1 when 1 given`() {
         assertEquals("1", FizzBuzz.convert(1))
     }
