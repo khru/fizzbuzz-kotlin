@@ -24,19 +24,10 @@ class FizzBuzzShould {
         assertEquals(number.toString(), FizzBuzz.convert(number))
     }
 
-    @Test
-    fun `return FizzBuzz when a numbers it's divisible by 15` () {
-        assertEquals("FizzBuzz", FizzBuzz.convert(15))
-    }
-
-    @Test
-    fun `return FizzBuzz when a numbers it's divisible by 30` () {
-        assertEquals("FizzBuzz", FizzBuzz.convert(30))
-    }
-
-    @Test
-    fun `return FizzBuzz when a numbers it's divisible by 60` () {
-        assertEquals("FizzBuzz", FizzBuzz.convert(60))
+    @ParameterizedTest
+    @ValueSource(ints = [15,30,60,90])
+    fun `return FizzBuzz when a number is multiple of three and five given`(number: Int) {
+        assertEquals("FizzBuzz", FizzBuzz.convert(number))
     }
 
 }
