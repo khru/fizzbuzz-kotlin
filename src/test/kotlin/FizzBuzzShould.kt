@@ -24,4 +24,9 @@ class FizzBuzzShould {
         assertEquals(number.toString(), FizzBuzz.convert(number))
     }
 
+    @Test
+    fun `return FizzBuzz when a numbers it's divisible by 15` () {
+        assertEquals("FizzBuzz", FizzBuzz.convert(15))
+    }
+
 }
