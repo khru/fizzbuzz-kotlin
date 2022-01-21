@@ -18,19 +18,10 @@ class FizzBuzzShould {
         assertEquals("Buzz", FizzBuzz.convert(number))
     }
 
-    @Test
-    fun `return a 1 when 1 given`() {
-        assertEquals("1", FizzBuzz.convert(1))
-    }
-
-    @Test
-    fun `return a 2 when 2 given`() {
-        assertEquals("2", FizzBuzz.convert(2))
-    }
-
-    @Test
-    fun `return a 4 when 4 given`() {
-        assertEquals("4", FizzBuzz.convert(4))
+    @ParameterizedTest
+    @ValueSource(ints = [1,2,4,7,8])
+    fun `return the number as string when a number is not multiple of three and five given`(number: Int) {
+        assertEquals(number.toString(), FizzBuzz.convert(number))
     }
 
 }
