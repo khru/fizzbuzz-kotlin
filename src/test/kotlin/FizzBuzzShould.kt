@@ -12,19 +12,10 @@ class FizzBuzzShould {
         assertEquals("Fizz", FizzBuzz.convert(number))
     }
 
-    @Test
-    fun `return Buzz when 5 given`() {
-        assertEquals("Buzz", FizzBuzz.convert(5))
-    }
-
-    @Test
-    fun `return Buzz when 10 given`() {
-        assertEquals("Buzz", FizzBuzz.convert(10))
-    }
-
-    @Test
-    fun `return Buzz when 20 given`() {
-        assertEquals("Buzz", FizzBuzz.convert(20))
+    @ParameterizedTest
+    @ValueSource(ints = [5,10,20,25])
+    fun `return Buzz when a divisible by five number it's given`(number: Int) {
+        assertEquals("Buzz", FizzBuzz.convert(number))
     }
 
     @Test
