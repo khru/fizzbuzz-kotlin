@@ -1,21 +1,15 @@
 import main.FizzBuzz
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 import kotlin.test.assertEquals
 
 class FizzBuzzShould {
-    @Test
-    fun `return Fizz when 3 given`() {
-        assertEquals("Fizz", FizzBuzz.convert(3))
-    }
 
-    @Test
-    fun `return Fizz when 6 given`() {
-        assertEquals("Fizz", FizzBuzz.convert(6))
-    }
-
-    @Test
-    fun `return Fizz when 9 given`() {
-        assertEquals("Fizz", FizzBuzz.convert(9))
+    @ParameterizedTest
+    @ValueSource(ints = [3,6,9,12])
+    fun `return Fizz when a divisible by three number it's given`(number: Int) {
+        assertEquals("Fizz", FizzBuzz.convert(number))
     }
 
     @Test
